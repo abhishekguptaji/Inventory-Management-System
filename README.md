@@ -1,2 +1,2 @@
-# portfolio
-This is the my portfolio made with HTML , CSS , JavaScript and use of Google spreadsheet for contact me.
+#MyShopWensite
+This is the full Stack Project that is develop for the business purpose.
