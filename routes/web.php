@@ -55,4 +55,5 @@ Route::view("/productList","productList")->name("productList");
 
 Route::get('/cartProducts/category/{category}', [ProductController::class, 'getByCategoryCart'])->name('cartProducts.byCategory');
 
-
+Route::view("/customerdata","customerdata")->name("customerdata");
+Route::get("/customerdata",[BillsController::class,'custmerdetails'])->name("customerdata");

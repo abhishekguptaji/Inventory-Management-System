@@ -22,7 +22,7 @@
     <li><a href="#">DashBoard</a></li>
     <li><a href="/about">About</a></li>
     <li><a href="#">Billing</a></li>
-    <li><a href="#">Customer Details</a></li>
+    <li><a href="/customerdata">Customer Details</a></li>
     <li><a href="/createCustomer">Cart</a></li>
     <li><a href="#">Return Product</a></li>
    </ul>
