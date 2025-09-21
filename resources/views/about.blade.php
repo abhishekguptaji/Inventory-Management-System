@@ -39,11 +39,11 @@
     <p>
         Key features include:
         <ul>
-            <li>📦 Real-time stock tracking</li>
-            <li>🧾 GST-compliant billing</li>
-            <li>📊 Sales analytics and reporting</li>
-            <li>👥 Customer and vendor management</li>
-            <li>🔐 Secure login and role-based access</li>
+            <li> Real-time stock tracking</li>
+            <li> GST-compliant billing</li>
+            <li> Sales analytics and reporting</li>
+            <li> Customer and vendor management</li>
+            <li> Secure login and role-based access</li>
         </ul>
     </p>
     <p>

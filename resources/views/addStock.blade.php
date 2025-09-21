@@ -70,10 +70,10 @@
 </head>
 <body>
 <div class="container">
-  <h3>📦 Add Stock</h3>
+  <h3>Add Stock</h3>
 
   <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-3">
-    <a href="/newProduct" class="btn btn-success">➕ Create New Product</a>
+    <a href="/newProduct" class="btn btn-success"> Create New Product</a>
   </div>
 
   <div class="search-box">
@@ -87,7 +87,7 @@
         <div class="col-md-4">
           <label for="categoryProduct" class="form-label fw-bold">Category</label>
           <select id="categoryProduct" name="categoryProduct" class="form-select" required>
-            <option value="" disabled selected>Select a category</option>
+            <option value="">Select a category</option>
             <option value="tools">Tools</option>
             <option value="buildingMaterials">Building Materials</option>
             <option value="plumbing">Plumbing</option>

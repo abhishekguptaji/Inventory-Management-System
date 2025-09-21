@@ -102,7 +102,7 @@
   @if(isset($products))
     <div class="row">
       <div class="table-container">
-        <h4 class="text-center mb-3">📦 Products in Category: <span style="color:#007bff">{{ $selectedCategory }}</span></h4>
+        <h4 class="text-center mb-3">Products in Category: <span style="color:#007bff">{{ $selectedCategory }}</span></h4>
         <table>
           <thead>
             <tr>

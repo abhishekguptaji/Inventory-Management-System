@@ -2,7 +2,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
-
+use App\Http\Controllers\BillsController;
 
 Route::get('/welcome',[ProductController::class,'getDashBoard'])->name('welcome');
 
@@ -55,5 +55,27 @@ Route::view("/productList","productList")->name("productList");
 
 Route::get('/cartProducts/category/{category}', [ProductController::class, 'getByCategoryCart'])->name('cartProducts.byCategory');
 
-Route::view("/customerdata","customerdata")->name("customerdata");
 Route::get("/customerdata",[BillsController::class,'custmerdetails'])->name("customerdata");
+
+Route::get('/createCustomer', [BillsController::class, 'findCustomer'])->name('create.customer');
+
+
+
+// ---------------------------------------------------------------------------------------------//
+
+Route::post('/cart/add', [BillsController::class, 'add'])->name('cart.add');
+
+// Remove product from cart
+Route::post('/cart/remove', [BillsController::class, 'remove'])->name('cart.remove');
+
+// View cart page
+Route::get('/cart', [BillsController::class, 'index'])->name('cart');
+
+Route::get('/bill', [BillsController::class, 'bill'])->name('cart.bill');
+
+Route::get('/customer-details', [BillsController::class, 'customerForm'])->name('cart.customerForm');
+Route::post('/generate-bill', [BillsController::class, 'generateBill'])->name('cart.generateBill');
+
+
+
+

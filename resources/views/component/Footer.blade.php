@@ -21,10 +21,11 @@
    <ul class="footer-list">
     <li><a href="#">DashBoard</a></li>
     <li><a href="/about">About</a></li>
-    <li><a href="#">Billing</a></li>
-    <li><a href="/customerdata">Customer Details</a></li>
-    <li><a href="/createCustomer">Cart</a></li>
-    <li><a href="#">Return Product</a></li>
+    <li><a href="/productList">ProductList</a></li>
+    <li><a href="/cart">Cart</a></li>
+    <!-- <li><a href="/customerdata">Customer Details</a></li> --> 
+    <!-- <li><a href="/createCustomer">Cart</a></li> -->
+    <!-- <li><a href="#">Return Product</a></li> -->
    </ul>
   </div>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>

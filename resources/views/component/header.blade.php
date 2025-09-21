@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | Hardware Store</title>
   <link rel="stylesheet"
    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
@@ -31,15 +27,6 @@
       color: #f1f1f1 !important;
     }
 
-    /* White hamburger menu icon */
-    .navbar-toggler {
-      border-color: #fff;
-    }
-    .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' 
-      xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28 255, 255, 255, 1 %29)' 
-      stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    }
   </style>
 </head>
 <body>
@@ -56,9 +43,8 @@
           <li class="nav-item"><a class="nav-link active" href="/checkStock">Check Stock</a></li>
           <li class="nav-item"><a class="nav-link active" href="/aboutEnd">About End</a></li>
           <li class="nav-item"><a class="nav-link active" href="/categoryList">Category List</a></li>
-          <li class="nav-item"><a class="nav-link active" href="#">Daily Report</a></li>
 
-          @if(session()->has('user'))
+      @if(session()->has('user'))
           <li class="nav-item">
             <form action="{{ route('logout') }}" method="POST">
               @csrf

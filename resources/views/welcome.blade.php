@@ -3,7 +3,7 @@
  <html>   
 <body>
 <div class="container mt-5">
-  <h3 class="mb-4 text-center fw-bold">📦 Products Count</h3>
+  <h3 class="mb-4 text-center fw-bold">Products Count</h3>
   <div class="row g-4">
     @foreach($productCounts as $item)
       <div class="col-md-4 col-sm-6">

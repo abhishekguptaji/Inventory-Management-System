@@ -51,7 +51,7 @@
 <body>
 
 <div class="table-container">
-  <h3>📊 Stock Details</h3>
+  <h3>Stock Details</h3>
   <table>
     <thead>
       <tr>

@@ -53,7 +53,7 @@
 <body>
 <div class="container">
   <div class="row">
-     <h3 class="text-center mt-3 mb-3">📋 About End Product</h3>
+     <h3 class="text-center mt-3 mb-3">About End Product</h3>
   </div>
   <div class="row">
     <table>
