@@ -28,6 +28,11 @@
           <li><a href="{{ route('cartProducts.byCategory', ['category' => 'buildingMaterials']) }}">Building Materials</a></li>
           <li><a href="{{ route('cartProducts.byCategory', ['category' => 'Plumbing']) }}">Plumbing</a></li>
           <li><a href="{{ route('cartProducts.byCategory', ['category' => 'electricalSupplies']) }}">Electrical Supplies</a></li>
+           <li><a href="{{ route('cartProducts.byCategory', ['category' => 'paintsAndCoating']) }}">Paints & Coatings</a></li>
+          <li><a href="{{ route('cartProducts.byCategory', ['category' => 'locksAndSecurity']) }}">Locks & Security</a></li>
+          <li><a href="{{ route('cartProducts.byCategory', ['category' => 'engineParts']) }}">Engine Parts</a></li>
+          <li><a href="{{ route('cartProducts.byCategory', ['category' => 'ply&Carparenter']) }}">Ply & Carpenter</a></li>
+          <li><a href="{{ route('cartProducts.byCategory', ['category' => 'othersMaterials']) }}">Other Materials</a></li>
         </ul>
       </div>
     </div>

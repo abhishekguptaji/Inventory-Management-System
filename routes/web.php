@@ -76,6 +76,8 @@ Route::get('/bill', [BillsController::class, 'bill'])->name('cart.bill');
 Route::get('/customer-details', [BillsController::class, 'customerForm'])->name('cart.customerForm');
 Route::post('/generate-bill', [BillsController::class, 'generateBill'])->name('cart.generateBill');
 
+// ----------------------------------------------------------------------------------
 
 
-
+Route::get('/invoice/{id}/download', [BillsController::class, 'downloadInvoicePdf'])
+     ->name('invoice.download');

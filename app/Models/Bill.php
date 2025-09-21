@@ -15,6 +15,11 @@ class Bill extends Model
 
     protected $casts = [
         'items' => 'array'
-    ];
+    ]; 
+
+    public function items()
+    {
+        return $this->hasMany(BillItem::class);
+    }
 
 }
