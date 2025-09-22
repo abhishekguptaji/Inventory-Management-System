@@ -12,8 +12,9 @@ use Barryvdh\DomPDF\Facade\Pdf;
 class BillsController extends Controller
 {
   public function custmerdetails(){
-    $custmerdetails = DB::select('SELECT * FROM customerdetails');
-    return view('customerdata',['custmerdetails'=>$custmerdetails]); 
+    $custmerdetails = DB::select('SELECT * FROM bills');
+    return view('customerdata',['custmerdetails'=>$custmerdetails]);
+    return "Jai shree Ram"; 
   }
    
   public function findCustomer(Request $request){
@@ -192,5 +193,52 @@ $cart = collect($items)->map(function ($item) {
 }
 
 //-------------------------------------------
+ 
+ function updateCustomer($id){
+    $customer = Bill::findOrFail($id);
+    return view('updateCustomer', compact('customer'));
+ }
+ 
+public function updateAmount(Request $req, $id)
+{
+    $req->validate([
+        'paid_amount' => 'required|numeric|min:0.01',
+    ]);
+    $bill = Bill::findOrFail($id);
+    $bill->paid_amount += $req->input('paid_amount');
+    $bill->balance = $bill->grand_total - $bill->paid_amount;
+    $bill->save();
+    return redirect()->back()->with('success', 'Paid amount updated successfully!');
+}
+
+public function returnProductfun(Request $request){
+    $query = Bill::query();
+    if($request->filled('mobile_number')){
+        $query->where('mobile_number','like','%'.$request->mobile_number.'%');
+    }
+    if($request->filled('customer_name')){
+        $query->where('customer_name','like','%'.$request->customer_name.'%');
+    }
+    $customer = $query->get();
+    return view('returnProduct',compact('customer'));
+}
+ 
+public function billsDashboardfun()
+{
+    $products = Product::all();
+    $productCount = $products->count();
+    $costPrice = $products->sum('costPrice');
+    $mkPrice = $products->sum('sellPrice');
+    $toalProduct = $products->sum('quantity');
+
+    $bills = Bill::all();
+    $billCount = $bills->count();
+    $toalAmount = $bills->sum('grand_total');
+    $paidAmount = $bills->sum('paid_amount'); 
+    $balanceAmount = $bills->sum('balance');
+
+    return view('billsDashboard', compact('products', 'productCount', 'costPrice','mkPrice','toalProduct','billCount','toalAmount','paidAmount','balanceAmount'));
+}
+
 
 }

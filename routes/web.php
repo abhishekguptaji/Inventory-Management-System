@@ -47,9 +47,9 @@ Route::delete('/aboutEnd/{id}', [ProductController::class, 'deleteStock'])->name
 
 // --------------------------------------------------------------------------------//
 
-Route::view("/createCustomer","createCustomer")->name("createCustomer");
 
-Route::view("/newCustomer","newCustomer")->name("newCustomer");
+
+
 
 Route::view("/productList","productList")->name("productList");
 
@@ -81,3 +81,16 @@ Route::post('/generate-bill', [BillsController::class, 'generateBill'])->name('c
 
 Route::get('/invoice/{id}/download', [BillsController::class, 'downloadInvoicePdf'])
      ->name('invoice.download');
+
+    //  -------------------------------------
+Route::get('/updateCustomer/{id}',[BillsController::class, 'updateCustomer']);
+Route::post('/updateCustomer/{id}',[BillsController::class, 'updateAmount' ]);
+
+Route::view('/returnProduct','returnProduct');  
+Route::get('/returnProduct', [BillsController::class, 'returnProductfun'])->name('return.product');
+
+// Route::get('/returnProduct/{id}', [BillsController::class, 'returnProductfun'])->name('return.product');
+
+
+Route::view('/billsDashboard','billsDashboard');
+Route::get('/billsDashboard', [BillsController::class, 'billsDashboardfun'])->name('return.product');
